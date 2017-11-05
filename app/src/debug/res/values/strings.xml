@@ -1,0 +1,4 @@
+<resources>
+    <string name="title_activity_bluetooth">Bluetooth</string>
+    <string name="title_activity_color_picker">color_picker</string>
+</resources>
