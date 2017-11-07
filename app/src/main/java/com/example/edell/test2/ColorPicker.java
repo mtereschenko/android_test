@@ -10,6 +10,8 @@ import android.os.IBinder;
 import android.util.Log;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -29,6 +31,8 @@ public class ColorPicker extends MenuCreator {
     private Intent intent;
     BluetoothService bluetoothService;
     boolean mBound = false;
+    Button solid_color;
+    String mode = "solid";
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -41,6 +45,15 @@ public class ColorPicker extends MenuCreator {
         setSupportActionBar(toolbar);
         intent = new Intent(this, BluetoothService.class);
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+
+        solid_color = (Button) findViewById(R.id.solid_color);
+
+
+        solid_color.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                sendCommand(mode);
+            }
+        });
     }
 
     private void ColorSelector () {

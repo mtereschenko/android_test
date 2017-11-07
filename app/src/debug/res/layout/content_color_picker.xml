@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:showIn="@layout/activity_color_picker"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.edell.test2.ColorPicker"
-    android:background="#111">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="com.example.edell.test2.ColorPicker"
+                tools:showIn="@layout/activity_color_picker">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:orientation="vertical">
 
         <com.flask.colorpicker.ColorPickerView
             android:id="@+id/color_picker_view"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            app:density="8"
-            app:wheelType="FLOWER" />
-
-        <!--<com.skydoves.colorpickerview.ColorPickerView-->
-            <!--android:id="@+id/colorPickerView"-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent"-->
-            <!--app:palette="@drawable/palette"/>-->
+            app:density="12"
+            app:wheelType="FLOWER"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/solid_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SET SOLID COLOR"
+            android:background="#444"/>
     </LinearLayout>
 
 </RelativeLayout>
