@@ -27,21 +27,22 @@ public class MenuCreator extends AppCompatActivity {
             case R.id.color_picker:
                 Intent color_picker_activity = new Intent(this, ColorPicker.class);
                 startActivity(color_picker_activity);
-                Toast.makeText(getApplicationContext(), "Item 1 Selected", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.rainbow:
                 Intent rainbow_activity = new Intent(this, Rainbow.class);
                 startActivity(rainbow_activity);
-                Toast.makeText(getApplicationContext(), "Item 3 Selected", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.strobe:
+                Intent strobe_activity = new Intent(this, Strobe.class);
+                startActivity(strobe_activity);
                 return true;
             case R.id.connection:
                 Intent connection_activity = new Intent(this, Connection.class);
                 startActivity(connection_activity);
-                Toast.makeText(getApplicationContext(), "Item 2 Selected", Toast.LENGTH_LONG).show();
                 return true;
-
+            case R.id.off:
+                return true;
             case R.id.about:
-                Toast.makeText(getApplicationContext(), "Item 2 Selected", Toast.LENGTH_LONG).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

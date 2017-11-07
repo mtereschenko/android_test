@@ -3,8 +3,12 @@
         android:title="Color"/>
     <item  android:id="@+id/rainbow"
         android:title="Rainbow"/>
+    <item  android:id="@+id/strobe"
+           android:title="Strobe"/>
     <item  android:id="@+id/connection"
         android:title="Connection"/>
     <item  android:id="@+id/about"
         android:title="About"/>
+    <item  android:id="@+id/off"
+           android:title="OFF"/>
 </menu>
