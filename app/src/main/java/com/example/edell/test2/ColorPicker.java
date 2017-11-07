@@ -85,9 +85,9 @@ public class ColorPicker extends MenuCreator {
     private String getRGB (String colorStr) {
 
         String ret;
-        int r = Integer.parseInt(colorStr.substring(0, 2), 16); // 16 for hex
-        int g = Integer.parseInt(colorStr.substring(2, 4), 16); // 16 for hex
-        int b = Integer.parseInt(colorStr.substring(4, 6), 16); // 16 for hex
+        int r = Integer.parseInt(colorStr.substring(2, 4), 16); // 16 for hex
+        int g = Integer.parseInt(colorStr.substring(4, 6), 16); // 16 for hex
+        int b = Integer.parseInt(colorStr.substring(6, 8), 16); // 16 for hex
 
         ret = "/" + r + "/" + g + "/" + b;
 
